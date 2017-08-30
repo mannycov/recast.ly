@@ -1,9 +1,9 @@
-var VideoList = () => (
-  <ul className="video-list">
-    {props.videos.map(video =>
-      <VideoListEntry video={video} />
+var VideoList = (props) => (
+  <div className="video-list">
+    {props.videos.map((video, key) =>
+      <VideoListEntry video={video} key={key} index={key}/>
     )}
-  </ul>
+  </div>
 );
 
 // PropTypes tell other developers what `props` a component expects
